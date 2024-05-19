@@ -4,8 +4,8 @@ import sys
 
 
 def request(query_char):
-    url1 = 'https://api.pwnedpasswords.com/range/' + query_char
-    rep = requests.get(url1)
+    url2 = 'https://api.pwnedpasswords.com/range/' + query_char
+    rep = requests.get(url2)
     if rep.status_code != 200:
         raise RuntimeError(f'Error fetching {rep.status_code}, please try again')
     return rep
